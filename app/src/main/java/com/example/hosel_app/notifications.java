@@ -21,7 +21,7 @@ public class notifications extends AppCompatActivity {
         list.add(new node("However little known the feelings or views of such a man\n" +
                 "may be on his first entering a neighbourhood, this truth is\n" +
                 "so well fixed in the minds of the surrounding families, that\n" +
-                "he is considered the rightful property of some one or other\n" +
+                "he is considered the rightful  of some one or other\n" +
                 "of their daughters.", "second"));
         list.add(new node("‘My dear Mr. Bennet,’ said his lady to him one day, ‘have\n" +
                 "you heard that Netherfield Park is let at last?’\n" +
@@ -39,7 +39,7 @@ public class notifications extends AppCompatActivity {
                 "chaise and four to see the place, and was so much delighted\n" +
                 "with it, that he agreed with Mr. Morris immediately", "sixth"));
         list.add(new node("that\n" +
-                "he is to take possession before Michaelmas, and some of his servants are to be in the house by the end of next week.’\n", "seventh"));
+                "he is to take possession before Michaelmas, and some of hs servants are to be in the house by the end of next week.’\n", "seventh"));
         list.add(new node("‘What is his name?’\n", "eighth"));
         rView=findViewById(R.id.rview);
         rView.setHasFixedSize(true);
