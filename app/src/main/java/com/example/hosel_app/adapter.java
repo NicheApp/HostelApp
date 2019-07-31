@@ -16,21 +16,21 @@ public class adapter extends RecyclerView.Adapter<adapter.viewholder>{
     private ArrayList<node>ls;// the arrayllist from node
     public adapter(ArrayList<node> ls){
         this.ls=ls;
-    }
-    public class viewholder extends ViewHolder{
+    }//constructor
+    public class viewholder extends ViewHolder{//creating the viewholder class
 
         public TextView textView;
         public TextView title;
-        public viewholder(@NonNull View itemView) {
-            super(itemView);
-            textView=(TextView)itemView.findViewById(R.id.txt);
+        public viewholder(@NonNull View itemView) {//constructor for the vieholder class
+            super(itemView);//passing item view to the parent class
+            textView=(TextView)itemView.findViewById(R.id.txt);//taking the views from the given itemview(parameters)
             title=(TextView) itemView.findViewById(R.id.title_node);
         }
     }
     @NonNull
     @Override
     public viewholder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        Context context=viewGroup.getContext();
+        Context context=viewGroup.getContext();//creatin
         LayoutInflater inflater=LayoutInflater.from(context);
         View view =inflater.inflate(R.layout.activity_each_node,viewGroup,false);
         viewholder evh=new viewholder(view);
