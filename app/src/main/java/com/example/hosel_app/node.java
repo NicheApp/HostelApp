@@ -1,5 +1,6 @@
 package com.example.hosel_app;
 
+//syntax of the data
 public class node {
     private String txt;
     private String title;

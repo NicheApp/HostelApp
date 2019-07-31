@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import static android.support.v7.widget.RecyclerView.*;
 
 public class adapter extends RecyclerView.Adapter<adapter.viewholder>{
-    private ArrayList<node>ls;
+    private ArrayList<node>ls;// the arrayllist from node
     public adapter(ArrayList<node> ls){
         this.ls=ls;
     }
