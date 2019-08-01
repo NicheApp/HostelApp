@@ -7,16 +7,30 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import static android.support.v7.widget.RecyclerView.*;
 
-public class adapter extends RecyclerView.Adapter<adapter.viewholder>{
+public class adapter extends RecyclerView.Adapter<adapter.viewholder>implements View.OnClickListener,View.OnLongClickListener{
     private ArrayList<node>ls;// the arrayllist from node
     public adapter(ArrayList<node> ls){
         this.ls=ls;
     }//constructor
+
+    @Override
+    public void onClick(View view) {
+        Toast.makeText(view.getContext(), "position = 1" , Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    public boolean onLongClick(View view) {
+        Toast.makeText(view.getContext(), "position = 1" , Toast.LENGTH_SHORT).show();
+        return false;
+    }
+
     public class viewholder extends ViewHolder{//creating the viewholder class
 
         public TextView textView;
@@ -27,12 +41,14 @@ public class adapter extends RecyclerView.Adapter<adapter.viewholder>{
             title=(TextView) itemView.findViewById(R.id.title_node);
         }
     }
+
     @NonNull
     @Override
     public viewholder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        Context context=viewGroup.getContext();//creatin
+        Context context=viewGroup.getContext();
         LayoutInflater inflater=LayoutInflater.from(context);
         View view =inflater.inflate(R.layout.activity_each_node,viewGroup,false);
+
         viewholder evh=new viewholder(view);
         return evh;
 
