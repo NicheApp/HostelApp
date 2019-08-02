@@ -70,7 +70,7 @@ public class adapter extends RecyclerView.Adapter<adapter.viewholder>implements 
         node n=ls.get(i);
         //viewholder.textView.setText(n.getText());
         viewholder.title.setText(n.getTitle());
-        Picasso.with(viewholder.imageView.getContext()).load(n.getImage_url()).into(viewholder.imageView);
+        Picasso.with(viewholder.imageView.getContext()).load(n.getImage_url()).resize(125,150).into(viewholder.imageView);
     }
 
     @Override
