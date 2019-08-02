@@ -15,32 +15,33 @@ public class notifications extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notifications);
+        String image_url="image";
         ArrayList<node> list=new ArrayList<>();
         list.add(new node("It is a truth universally acknowledged, that a single man in\n" +
-                "possession of a good fortune, must be in want of a wife.", "first"));
+                "possession of a good fortune, must be in want of a wife.", "first", image_url));
         list.add(new node("However little known the feelings or views of such a man\n" +
                 "may be on his first entering a neighbourhood, this truth is\n" +
                 "so well fixed in the minds of the surrounding families, that\n" +
                 "he is considered the rightful  of some one or other\n" +
-                "of their daughters.", "second"));
+                "of their daughters.", "second", image_url));
         list.add(new node("‘My dear Mr. Bennet,’ said his lady to him one day, ‘have\n" +
                 "you heard that Netherfield Park is let at last?’\n" +
-                "Mr. Bennet replied that he had not.", "third"));
+                "Mr. Bennet replied that he had not.", "third", image_url));
         list.add(new node("‘But it is,’ returned she; ‘for Mrs. Long has just been here,\n" +
-                "and she told me all about it.’\n", "fourth"));
+                "and she told me all about it.’\n", "fourth", image_url));
         list.add(new node(" Mr. Bennet made no answer.\n" +
                 "‘Do you not want to know who has taken it?’ cried his\n" +
                 "wife impatiently.\n" +
                 "‘YOU want to tell me, and I have no objection to hearing it.’\n" +
-                "This was invitation enough.", "fifth"));
+                "This was invitation enough.", "fifth", image_url));
         list.add(new node("‘Why, my dear, you must know, Mrs. Long says that\n" +
                 "Netherfield is taken by a young man of large fortune from\n" +
                 "the north of England; that he came down on Monday in a\n" +
                 "chaise and four to see the place, and was so much delighted\n" +
-                "with it, that he agreed with Mr. Morris immediately", "sixth"));
+                "with it, that he agreed with Mr. Morris immediately", "sixth", image_url));
         list.add(new node("that\n" +
-                "he is to take possession before Michaelmas, and some of hs servants are to be in the house by the end of next week.’\n", "seventh"));
-        list.add(new node("‘What is his name?’\n", "eighth"));
+                "he is to take possession before Michaelmas, and some of hs servants are to be in the house by the end of next week.’\n", "seventh", image_url));
+        list.add(new node("‘What is his name?’\n", "eighth", image_url));
         rView=findViewById(R.id.rview);
         rView.setHasFixedSize(true);
         laymanager=new LinearLayoutManager(this);//LayoutManager(this);

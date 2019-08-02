@@ -37,7 +37,7 @@ public class adapter extends RecyclerView.Adapter<adapter.viewholder>implements 
         public TextView title;
         public viewholder(@NonNull View itemView) {//constructor for the vieholder class
             super(itemView);//passing item view to the parent class
-            textView=(TextView)itemView.findViewById(R.id.txt);//taking the views from the given itemview(parameters)
+           //textView=(TextView)itemView.findViewById(R.id.txt);//taking the views from the given itemview(parameters)
             title=(TextView) itemView.findViewById(R.id.title_node);
         }
     }
@@ -61,7 +61,7 @@ public class adapter extends RecyclerView.Adapter<adapter.viewholder>implements 
     @Override
     public void onBindViewHolder(@NonNull viewholder viewholder, int i) {
         node n=ls.get(i);
-        viewholder.textView.setText(n.getText());
+        //viewholder.textView.setText(n.getText());
         viewholder.title.setText(n.getTitle());
     }
 
