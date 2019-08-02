@@ -6,8 +6,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -15,8 +18,10 @@ import static android.support.v7.widget.RecyclerView.*;
 
 public class adapter extends RecyclerView.Adapter<adapter.viewholder>implements View.OnClickListener,View.OnLongClickListener{
     private ArrayList<node>ls;// the arrayllist from node
+    private Context context;
     public adapter(ArrayList<node> ls){
         this.ls=ls;
+
     }//constructor
 
     @Override
@@ -35,9 +40,11 @@ public class adapter extends RecyclerView.Adapter<adapter.viewholder>implements 
 
         public TextView textView;
         public TextView title;
+        public ImageView imageView;
         public viewholder(@NonNull View itemView) {//constructor for the vieholder class
             super(itemView);//passing item view to the parent class
            //textView=(TextView)itemView.findViewById(R.id.txt);//taking the views from the given itemview(parameters)
+            imageView=(ImageView)itemView.findViewById(R.id.image);
             title=(TextView) itemView.findViewById(R.id.title_node);
         }
     }
@@ -63,6 +70,7 @@ public class adapter extends RecyclerView.Adapter<adapter.viewholder>implements 
         node n=ls.get(i);
         //viewholder.textView.setText(n.getText());
         viewholder.title.setText(n.getTitle());
+        Picasso.with(viewholder.imageView.getContext()).load(n.getImage_url()).into(viewholder.imageView);
     }
 
     @Override
