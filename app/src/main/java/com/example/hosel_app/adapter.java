@@ -1,6 +1,7 @@
 package com.example.hosel_app;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -64,6 +65,7 @@ public class adapter extends RecyclerView.Adapter<adapter.viewholder>{
     @Override
     public void onBindViewHolder(@NonNull viewholder viewholder, int i) {
         node n=ls.get(i);
+        final int itr=i;
         //viewholder.textView.setText(n.getText());
         viewholder.title.setText(n.getTitle());
         Picasso.with(viewholder.imageView.getContext()).load(n.getImage_url()).resize(125,150).into(viewholder.imageView);
@@ -74,6 +76,10 @@ public class adapter extends RecyclerView.Adapter<adapter.viewholder>{
             @Override
             public void onClick(View view) {
 
+                node n=ls.get(itr);
+                Intent intent = new Intent(view.getContext(),notification_detail.class);
+                intent.putExtra("id", ""+n);
+                view.getContext().startActivity(intent);;
                 Toast.makeText(view.getContext(),"this is a toast", Toast.LENGTH_SHORT).show();
 
 
