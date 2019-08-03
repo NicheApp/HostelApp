@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:itemIconTint="@color/colorPrimary"
+        app:itemIconTint="@color/colorPrimaryDark"
         app:labelVisibilityMode="labeled"
 
         app:menu="@menu/bottom_nav" />
@@ -30,6 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
+        android:backgroundTint="@color/colorPrimaryDark"
         android:layout_above="@id/nav_view"
         android:layout_margin="20dp"
         app:srcCompat="@drawable/ic_person_black_24dp"

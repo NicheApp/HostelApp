@@ -14,7 +14,9 @@ public class notifications extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_notifications);
+
         //String image_url= "https://support.rebrandly.com/hc/article_attachments/360020801793/rebrandly_url_shortener_010.png";
        String title[]={"first","second","third","fourth","fifth","sixth","seventh"};
        String imaage_url_data[]= {"https://travel.home.sndimg.com/content/dam/images/travel/fullset/2015/10/12/new-seven-wonders-great-wall-of-china.jpg.rend.hgtvcom.616.462.suffix/1491581549051.jpeg",
