@@ -1,0 +1,15 @@
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+
+   
+    <item
+        android:id="@+id/reset" android:icon="@drawable/ic_share" app:showAsAction="always|withText" android:title="reset"/>
+    <item
+        android:id="@+id/about"  android:title="Feedback">
+    </item>
+    <item
+        android:id="@+id/exit"  app:showAsAction="never" android:title="about">
+    </item>
+</menu>
