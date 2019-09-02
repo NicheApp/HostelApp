@@ -1,4 +1,4 @@
-package com.example.bottomnavigation;
+package com.example.bottomnavigation.UI.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,10 +9,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class Homefragment extends Fragment {
+import com.example.bottomnavigation.R;
+
+public class maintenance extends Fragment {
+    View v;
+    public maintenance()
+    {
+
+    }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.notification,null);
+       v=inflater.inflate(R.layout.maintenance,container,false);
+        return v;
     }
 }
