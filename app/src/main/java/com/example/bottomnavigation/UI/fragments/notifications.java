@@ -20,7 +20,7 @@ import java.util.List;
 public class notifications extends Fragment {
     View v;
     private RecyclerView mrecyclerview;
-    private List<notify1> notificat;
+
     public notifications()
     {
 
@@ -45,7 +45,7 @@ public class notifications extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        notificat=new ArrayList<>();
+
 
     }
 }
